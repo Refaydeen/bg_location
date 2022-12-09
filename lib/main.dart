@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:bg_location/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_background_geolocation/flutter_background_geolocation.dart'
     as bg;
@@ -22,17 +20,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(title: 'Background Geolocation'),
-      routes: routes,
+      home: MyHomePage(),
+
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -116,9 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Background Location'),
       ),
       body: Center(
         child: Container(
